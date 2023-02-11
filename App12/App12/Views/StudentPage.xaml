@@ -4,7 +4,7 @@
              x:Class="App12.Views.StudentPage" Background="silver">
     <StackLayout>
         <StackLayout x:Name="friendStack">
-            <Label FontAttributes="Italic" x:Name="testLabel" Text="Кол-во вещей:" />
+            <Label FontAttributes="Italic" x:Name="testLabel" Text="Количество вещей:" />
             <Entry Keyboard="Numeric" Text="{Binding FIO}" FontSize="Medium" />
             <Label FontAttributes="Italic" x:Name="testLabel2" Text="Вес в кг:" />
             <Entry Keyboard="Numeric" Text="{Binding Street}" FontSize="Medium" />
