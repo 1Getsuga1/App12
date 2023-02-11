@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App12.Views.StudentsListPage"
+             Title="Багаж" Background="silver">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <StackLayout Padding="40">
+                <ListView x:Name="booksList" ItemsSource="{Binding Students}"
+              SelectedItem="{Binding SelectedFriend, Mode=TwoWay}" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout>
+                                        <Label  x:Name="labelTest" Text="{Binding FIO, StringFormat='Кол-во вещей: {0}'}"/>
+                                        <Label  x:Name="labelTest1" Text="{Binding Street, StringFormat='Вес в кг: {0}'}"/>
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button BackgroundColor="Transparent"
+                BorderColor="OrangeRed"
+                BorderWidth="1.5"
+                CornerRadius="20" HorizontalOptions="Fill" Text="Добавить багаж" WidthRequest="100" Command="{Binding CreateStudentCommand}" />
+            </StackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

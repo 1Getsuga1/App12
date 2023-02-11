@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App12.Views.StudentPage" Background="silver">
+    <StackLayout>
+        <StackLayout x:Name="friendStack">
+            <Label FontAttributes="Italic" x:Name="testLabel" Text="Кол-во вещей:" />
+            <Entry Keyboard="Numeric" Text="{Binding FIO}" FontSize="Medium" />
+            <Label FontAttributes="Italic" x:Name="testLabel2" Text="Вес в кг:" />
+            <Entry Keyboard="Numeric" Text="{Binding Street}" FontSize="Medium" />
+        </StackLayout>
+        <StackLayout Orientation="Vertical">
+            <Button  BackgroundColor="Transparent"
+                BorderColor="OrangeRed"
+                BorderWidth="1.5"
+                CornerRadius="50" Text="Добавить" Command="{Binding ListViewModel.SaveFriendCommand}" CommandParameter="{Binding}" />
+            <Button  BackgroundColor="Transparent"
+                BorderColor="OrangeRed"
+                BorderWidth="1.5"
+                CornerRadius="50" Text="Редактировать" Command="{Binding ListViewModel.SaveFriendCommand}" CommandParameter="{Binding}" />
+            <Button  BackgroundColor="Transparent"
+                BorderColor="OrangeRed"
+                BorderWidth="1.5"
+                CornerRadius="50" Text="Удалить" Command="{Binding ListViewModel.DeleteFriendCommand}" CommandParameter="{Binding}" />
+            <Button  BackgroundColor="Transparent"
+                BorderColor="OrangeRed"
+                BorderWidth="1.5"
+                CornerRadius="50" Text="Назад" Command="{Binding Path=ListViewModel.BackCommand}" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

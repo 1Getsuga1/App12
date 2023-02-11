@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App12.Views.AuthPage" Background="white">
+    <StackLayout Padding="40">
+        <Entry x:Name="user" FontAttributes="Italic" Placeholder="Пользователь" TextColor="Black" PlaceholderColor="Silver"/>
+        <Entry x:Name="password" FontAttributes="Italic" Placeholder="Пароль" IsPassword="True" TextColor="Black" PlaceholderColor="Silver"/>
+        <Button x:Name="authBtn"
+                VerticalOptions="Center"
+                Text="Вход"
+                TextColor="Black"
+                BackgroundColor="Transparent"
+                BorderColor="OrangeRed"
+                BorderWidth="1.5"
+                CornerRadius="20"
+                    Clicked="authBtn_Clicked">
+        </Button>
+    </StackLayout>
+</ContentPage>
+    
