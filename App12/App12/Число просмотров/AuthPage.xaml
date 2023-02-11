@@ -7,7 +7,7 @@
         <Entry x:Name="password" FontAttributes="Italic" Placeholder="Пароль" IsPassword="True" TextColor="Black" PlaceholderColor="Silver"/>
         <Button x:Name="authBtn"
                 VerticalOptions="Center"
-                Text="Вход"
+                Text="Войти"
                 TextColor="Black"
                 BackgroundColor="Transparent"
                 BorderColor="OrangeRed"
